@@ -1,0 +1,11 @@
+version: 0.1
+
+phases:
+  post_build:
+    commands:
+      - aws s3 cp javaWeb.zip s3://github-s3/files
+
+artifacts:
+  files:
+    - '**/*'
+  discard-paths: yes
